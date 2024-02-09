@@ -1,0 +1,33 @@
+Syntax - SPEED speed_factor, r_speed_factor units ALWAYS
+1) SPEED 50 ALWAYS - permanently set the robot speed at 50%. Set the nominal speed for subsequent robot motions.
+
+2) OPENI - Open the robot gripper. It causes a BREAK in the current continuous-path motion and causes the 
+hand to open immediately after the current motion completes
+
+Syntax - APPRO location, distance
+3) APPRO PEG, 50 - Start a robot motion toward a location defined relative to specified location
+
+Syntax - MOVES location
+4) MOVES PEG - Initiate a robot motion to the position and orientation described by the given location. 
+MOVES causes a straight-line motion, during which no changes in configuration are permitted.
+
+5) CLOSEI - Close the robot gripper. It causes a BREAK in the current continuous-path motion and 
+causes the hand to close immediately after the current motion completes.
+
+Syntax - DELAY time
+6) DELAY 2 - It cause robot motion to stop for the specified time. It causes all robot motion to stop for
+2 seconds and any pending hand operation to occur. Clears any temporary trajectory switches that may be set, 
+and cancels any pending requests for configuration change.
+
+Syntax - DEPART distance
+7) DEPART 50 - Back away a safe distance. Start a robot motion away from the current location
+
+8) APPRO PLACE, 50 - Start a robot motion toward a location defined relative to specified location
+
+Syntax - MOVE location
+9) MOVE PLACE - Initiate a robot motion to the position and orientation described by the given location. 
+MOVE causes a joint-interpolated motion.
+
+10) OPENI - Open the robot gripper.
+
+11) DEPART 50 - Back away a safe distance.
